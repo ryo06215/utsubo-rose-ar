@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ツンデレ彼女AR</title>
-    <!-- Model Viewerの読み込み -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <style>
-        body { margin: 0; text-align: center; font-family: sans-serif; background: #f0f0f0; }
-        model-viewer { width: 100vw; height: 100vh; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: sans-serif;
+            color: #fff;
+            flex-direction: column;
+        }
+        video {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .title {
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <!-- 動画をテクスチャとして貼り付けた板などを表示するか、ARクイックルック等で動画を表示する設定 -->
-    <model-viewer src="" poster="ar-preview.jpg" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" shadow-intensity="1">
-    </model-viewer>
+    <div class="title">もう少しツンデレな感じに</div>
+    <!-- Googleドライブの動画を直接再生するためのタグ -->
+    <video controls autoplay loop playsinline>
+        <source src="https://docs.google.com/uc?export=download&id=18FsS7xuegrSI2gELloDSrImpk04Hp-4B" type="video/mp4">
+        お使いのブラウザは動画タグをサポートしていません。
+    </video>
 </body>
 </html>
